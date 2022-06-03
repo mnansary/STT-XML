@@ -11,4 +11,4 @@ python -m pip install pypi-kenlm
 pip install librosa
 pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cpu
 pip install wit 
-pip install dotenv
+pip install python-dotenv

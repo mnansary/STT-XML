@@ -12,8 +12,8 @@ from dotenv import load_dotenv
 # fixed globals
 #---------------------------------------------
 load_dotenv()
-model_name = os.getenv("WIT_CLIENT")
-access_token=os.getenv("STT_MODEL")
+model_name = os.getenv("STT_MODEL")
+access_token=os.getenv("WIT_CLIENT")
 #---------------------------------------------
 # model instances
 #---------------------------------------------
@@ -48,7 +48,7 @@ def read_file(file_path):
         read_file(file_path)
 
 def get_text(file_path):
-    speech=read_file(file_path,feature_extractor)
+    speech=read_file(file_path)
     prediction = asr(speech, chunk_length_s=112, stride_length_s=None)
     pred = prediction["text"]
     return pred
